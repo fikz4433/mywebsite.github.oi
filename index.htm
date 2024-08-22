@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Mantan Terindah</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang, Gita!</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Pesan Spesial</h2>
+            <p>Halo Gita, gw cuma mau ngasih tau lu betapa berartinya lu bagi gw. Thanks udah ngejawab pertanyaan gw yg terakhir, gw minta maaf kalo ada yang kurang baik dari gw. Semoga kita bisa bersama lagi di masa depan. I love you.</p>
+        </section>
+        <section>
+            <h2>Galeri Kenangan</h2>
+            <img src="Gita.jpeg" alt="Foto Kenangan">
+        </section>
+        <section>
+            <h2>Hubungi Aku</h2>
+            <p>Jika kamu ingin berbicara denganku, kamu bisa menghubungiku melalui email di <a href="mailto:fikrigaming149@gmail.com">fikrigaming149@gmail.com</a>.</p>
+        </section>
+        <section>
+            <h2>Salin Link Halaman</h2>
+            <button id="copyButton">Salin Link</button>
+            <p id="copyMessage" style="display:none;">Link telah disalin!</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Cintaku</p>
+    </footer>
+
+    <script>
+        document.getElementById('copyButton').addEventListener('click', function() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(function() {
+                document.getElementById('copyMessage').style.display = 'block';
+                setTimeout(function() {
+                    document.getElementById('copyMessage').style.display = 'none';
+                }, 2000);
+            }, function(err) {
+                console.error('Error copying text: ', err);
+            });
+        });
+    </script>
+</body>
+</html>
